@@ -4,7 +4,7 @@ title: numpy dot 详解
 &emsp;&emsp;用numpy编程实现LinearRegression和LogisticRegression算法时，常用到dot方法计算cost函数和gradient，所以对dot需要准确的认识，才能够保证计算过程不出问题。
 &emsp;&emsp;numpy的dot方法，并不是传统意义上的点积或者说不仅仅是点积，如果你学过matlab，你会发现numpy的dot和matlab也有区别。因此，为了避免混淆这里给出numpy的dot方法常用计算和意义分析，帮助理解记忆。
 
-# numpy的向量和矩阵表示
+# 1. numpy的向量和矩阵表示
 
 &emsp;&emsp;numpy在向量和矩阵表示上做的不好，不如Matlab明确。
 &emsp;&emsp;numpy的一维向量，其本质是一维数组，numpy默认将其作为行向量处理。
@@ -36,7 +36,7 @@ title: numpy dot 详解
    (1, 3)
 ```
 
-# 一维和一维数组的dot
+# 2. 一维和一维数组的dot
 
 1. 行向量和行向量的点积
 ``` python
@@ -58,7 +58,7 @@ title: numpy dot 详解
 
 综上，在numpy计算中，只有一维数组dot一维数组才符合数学定义，满足线性代数的向量点积。
 
-# 一维数组和二维矩阵的dot
+# 3. 一维数组和二维矩阵的dot
 行向量/列向量和矩阵dot，代码如下：
 ``` python
 >> vec1 = np.array([1, 2, 3])
@@ -89,7 +89,7 @@ title: numpy dot 详解
 
 综上，一维和二维进行np.dot相当于矩阵乘法，必须满足维度相容。
 
-# 二维和二维矩阵的dot
+# 4. 二维和二维矩阵的dot
 矩阵和矩阵的dot运算，代码如下：
 ``` python 
 >> mat1 = np.array([[1, 2, 3],[1, 1, 1]])
@@ -114,7 +114,7 @@ title: numpy dot 详解
 
 综上，二维情况下，np.dot依然是矩阵乘法，必须满足维度相容。
 
-# 总结
+# 5. 总结
 &emsp;&emsp;np.dot的运算规则：
 1. 只有一维数组(n,)之间的dot运算，是线性代数意义上的点积，计算结果维标量。
 2. 一维和多维以及多维和多维数组的dot运算，按照矩阵乘法进行运算，必须符合维度相容原则，计算结果为数组。

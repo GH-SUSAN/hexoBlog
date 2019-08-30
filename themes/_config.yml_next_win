@@ -161,7 +161,7 @@ toc:
   enable: true
 
   # Automatically add list number to toc.
-  number: true
+  number: false
 
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: false
@@ -212,6 +212,8 @@ save_scroll: false
 
 # Automatically excerpt description in homepage as preamble text.
 excerpt_description: true
+
+toc_list_number: false
 
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
