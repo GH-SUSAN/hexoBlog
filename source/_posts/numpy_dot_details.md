@@ -85,6 +85,11 @@ title: numpy dot 详解
 
 >> vec1.dot(mat1) 
    ValueError: shapes (3,) and (2,3) not aligned: 3 (dim 0) != 2 (dim 0) ### (3,)*(2,3)不符合维度相容，报错
+
+>> vec3 = np.array([1, 3])
+   array([1, 3])
+>> vec3.dot(mat1)
+   array([4, 5, 6])  ### (2,) * (2,3) = (3,) 这种情况下也符合维度相容，需要注意
 ```
 
 综上，一维和二维进行np.dot相当于矩阵乘法，必须满足维度相容。
